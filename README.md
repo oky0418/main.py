@@ -1,3 +1,6 @@
+your-repo/
+├── bot.py               # 你的 Telegram 机器人代码
+
 import random
 import datetime
 from telegram import Update
@@ -304,3 +307,30 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+├── requirements.txt      # 列出所有依赖库
+
+python-telegram-bot==20.0
+
+├── Procfile              # Railway 启动应用的配置文件
+
+web: python bot.py
+
+├── runtime.txt           # Python 版本
+
+python-3.9.7
+
+└── .gitignore            # 忽略某些文件
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# 虚拟环境
+venv/
+.env/
+
+# IDE 文件
+.vscode/
+.idea/
